@@ -1,0 +1,39 @@
+public:: true
+file:: [Essential_Calculus_Second_Edition_(James_Stewart)_(z-lib.org)_1666704625046_0.pdf](../assets/Essential_Calculus_Second_Edition_(James_Stewart)_(z-lib.org)_1666704625046_0.pdf)
+file-path:: ../assets/Essential_Calculus_Second_Edition_(James_Stewart)_(z-lib.org)_1666704625046_0.pdf
+
+- [:span]
+  ls-type:: annotation
+  hl-page:: 28
+  hl-color:: yellow
+  id:: 6357f053-ac52-40d9-b25e-6d925b3a022c
+  hl-type:: area
+  hl-stamp:: 1666707538249
+- [:span]
+  ls-type:: annotation
+  hl-page:: 303
+  hl-color:: yellow
+  id:: 638c997f-8940-4c79-a857-70e5efd82b55
+  hl-type:: area
+  hl-stamp:: 1670158718835
+- [:span]
+  ls-type:: annotation
+  hl-page:: 305
+  hl-color:: yellow
+  id:: 638c9ed9-36d1-4ad3-8422-5609c207a4f3
+  hl-type:: area
+  hl-stamp:: 1670160088958
+- [:span]
+  ls-type:: annotation
+  hl-page:: 66
+  hl-color:: yellow
+  id:: 63edef77-782a-4d9c-8512-01b82fc0f0fd
+  hl-type:: area
+  hl-stamp:: 1676537718355
+- [:span]
+  ls-type:: annotation
+  hl-page:: 58
+  hl-color:: yellow
+  id:: 63edf939-49b0-4278-b9b8-d8bfe16acdec
+  hl-type:: area
+  hl-stamp:: 1676540214425
