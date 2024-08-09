@@ -1,0 +1,121 @@
+public:: true
+
+- ## 前言
+	- ### 資料來源
+		- https://www.techbang.com/tags/13906
+			- https://web.archive.org/web/20231217141634/http://www.techbang.com:80/tags/13906
+			  id:: 657f0356-3d2f-4dd9-9d12-4ef75276c1e9
+			-
+- # 目錄
+	- ((657c2ecb-5110-45d4-a15a-bd3dc69eb208))
+	- ((662d5134-c717-4a73-9a8d-4b5ef2129ddb))
+- # Network Model
+  id:: 657c2ecb-5110-45d4-a15a-bd3dc69eb208
+  collapsed:: true
+	- ## OSI <Open System Interconnection Model>
+		- ### 參考
+			- https://zh.wikipedia.org/zh-tw/OSI%E6%A8%A1%E5%9E%8B
+			-
+			-
+		- ### 開放式系統互連模型
+		- ### 使電腦在世界範圍內互聯為網路的標準框架，定義於ISO/IEC 7498-1
+		- ### 起初設計為七層，但表現層與會議層被棄用，（TCP/IP中）功能由應用層與傳輸層取代
+			- ![figs/snrt_0202.gif](http://books.msspace.net/mirrorbooks/snortids/0596006616/images/0596006616/figs/snrt_0202.gif){:height 296, :width 477}
+			- ### Layer 7: 應用層 <application layer>
+				- ### 組成message
+				- ### 使用者、應用程式與電腦溝通的實際管道，執行應用程式協定，如：FTP, Telnet, SMTP (Simple Mail Transfer Protocol)
+				- ### Layer 6: 表現層 <presentation layer>
+				- ### Layer 5: 會議層 <session layer>
+			- ### Layer 4: 傳輸層 <transport layer>
+				- ### 增加前標頭與後標頭，組成segment
+				- ### 負責所有訊息的行程對行程傳遞<Process-to-process delivery>
+				- ### 邏輯的通訊是由客戶端與伺服器端的傳輸層所建立
+				- ### 通訊埠 [port]
+					- ### 在傳輸層的通訊協定中通常需要指定埠號<如TCP和UDP均需要>
+					- ### 在應用層中，使用主從式架構的通訊協定，在每個通訊埠上提供多路複用服務[multiplexing service]，經由公認通訊埠號[well-known port numbers]，通常可以辨認出這個連線使用的通訊協定，其中具代表性的是最基礎的1024個公認通訊埠號[well-known port numbers]
+					- ![https://networkproguide.com/wp-content/uploads/common-network-ports-cheat-sheet-821x1024.png](https://networkproguide.com/wp-content/uploads/common-network-ports-cheat-sheet-821x1024.png){:height 791, :width 628}
+						- ##### 取自: https://www.codequoi.com/en/internet-layered-network-architecture/
+			- ### Layer 3: 網路層 <network layer>
+				- ### 組成datagram
+				  id:: 65dbe17d-81a8-406c-8a71-ea40dc38757d
+				- ### 負責來源端至目的端的封包傳輸，提供路由和尋址（定址）的功能
+				- ### 定址
+					- ### 用IP來唯一標示網際網路的各個定址，網路層通過IP進行相互通訊（類似MAC位址），現有IP格式為IPV4、IPV6
+				- ### 路由
+					- ### 在同一個內網中並不需要網路層裝置，只需要資料鍊結層即可進行交流，在不同網路間則必須借助路由器這類三層裝置進行交流
+					- ![Diagram showing two computers connected](https://www.codequoi.com/wp-content/uploads/2022/08/host_router_switch_protocol_layers_en.drawio-1024x566.png)
+						- ##### 取自: https://www.codequoi.com/en/internet-layered-network-architecture/
+			- ### Layer 2: 資料鏈結層 <data link layer>
+				- ### 增加前標頭與後標頭
+				- ### 幫助網路層與實體層做資訊同步，負責節點對節點的資料框（Frame）傳送，節點可以是電腦或路由器等
+				- ### 媒介訪問控制（MAC）子層
+					- ### 在廣播式多路訪問鏈路中（區域網路），由於可能存在媒介爭用，所以此子層專門處理媒介訪問的爭用與衝突問題
+				- ### 邏輯鍊路控制（LLC）子層
+				- ### 常見資料連結層的裝置
+					- ### 網卡（實體層和資料連結層的MAC子層）
+					- ### 交換機是本層裝置。而集線器是實體層裝置，不是資料連結層裝置
+					- ### 橋接器（又稱網橋）
+			- ### Layer 1: 實體層 <physical layer>
+				- ### 負責協調在實體的傳輸媒介傳輸位元串所需要的函數
+	- ## TCP/IP
+		- ### 將OSI中的七層參考模型簡化成五層的協定組
+		- ### 位址解析協定（Address Resolution Protocol, ARP）
+		- ### 鄰居發現協定（NDP）
+		- ### IP層
+			- ### 屬於網路層
+			- ### 規定與實現網路層功能
+			- ### 通訊協定
+				- ### ICMP
+					- ### Internet Control Message Protocol
+					- ### 為IP層通訊協定，用於對網路狀態的檢查與網路異常的回報
+					- ### 常用的指令ping與traceroute底層都是為ICMP
+		- ### TCP vs UDP
+			- ### 屬於傳輸層協定
+			- ### TCP
+				- ### 除了連接埠<Port>的功能外，更重要的是TCP還提供了一個可靠的傳輸機制，當來源端在傳輸資料時，透過與目的地的相互溝通，可以確定目的端一經收到所傳輸的資料<ACK封包>
+				- ### 為一種連線導向式[Connection oriented]的通訊協議，並採用三向交握[Three-way handshaking]來建立連線
+					- ![](https://www.tutorialspoint.com/assets/questions/media/59897/10(a).jpg)
+						- ##### 取自: https://www.tutorialspoint.com/tcp-3-way-handshake-process
+				- ### UDP
+					- ### 一個相當簡單的傳輸層協議，僅提供連接埠處理的功能，UDP表頭紀錄封包來源端與目的端的連接埠資訊，讓封包能夠正確送達到目的端的應用程式
+					- ### 為非連線式[Non-connection oriented]來傳送封包，主要原因是節省電腦資源，應用場景如：影音串流的RTP或網域名稱系統DNS
+	- ## Ethernet
+	- ### Wi-Fi
+		- ### 802.11
+		- ### Wi-Fi protected access
+			- ### 是由Wi-Fi聯盟制訂與發佈的用來保護無線網路（Wi-Fi）存取安全的技術標準
+			- ### WEP <Wired Equivalent Privacy>
+			- ### WPA <Wi-Fi Protected Access>
+			- ### WPA 2
+			- ### WPA 3
+		- ### Target Users <認證金鑰分發>
+			- ### WPA-Personal
+			- ### WPA-Enterprise
+				- ### IEEE 802.1X
+		- ### Encryption protocol
+			- ### TKIP (Temporal Key Integrity Protocol)
+			- ### CCMP (CTR mode with CBC-MAC Protocol)
+- # 網路架構
+  id:: 662d5134-c717-4a73-9a8d-4b5ef2129ddb
+  collapsed:: true
+	- ### 分封交換
+		- 網路傳輸將資料分割成段，由未知路徑<此傳輸過程稱之為路由>，傳遞到目的地之後在將多個段組合成原始資料
+		- 以下為分封交換與線路交換之區別
+			- 優點
+				- 無須確認線路連結狀態
+					- 分封交換不須檢查連線的線路是否暢通，路由的過程中，每個packet的移動路線可能會不同，但最終都能夠傳遞到目的地<除非過程中發生loss packet>
+				- 線路承載量大
+					- 分封交換只會在傳送資料時佔用線路，所以線路可以讓多台設備共用，例如使用switch或router串接多個設備到一個輸出入線路，達到多工的效果
+				- 多方交流
+					- 由上一個優點即可發現，線路同時可以由多個設備共用，並且利用switch或router連接多個設備到一個輸出入線路，其會在中間將流過的packet傳道相對應的設備或線路，以此達到多方交流，在同一個交換機下的設備，也可以進行資料傳遞，形成內網
+			- 缺點
+				- 不具即時性
+					- 由於每個packet行徑路線可能會不同，中間路由到的設備規格也會不同，使得可能出現賢傳的packet卻比後傳的晚收到，甚至發生loss packet造成資料丟失
+				- 無保證頻寬
+					- 因為可以多台設備共用，雖然網路利用率提高了，但也使得每個設備得到的頻寬受到分割
+				- 保密性差
+					- 在線路交換方式下，一條線路只會連接兩台設備，確保了資料交換的隱密性，但分封交換在某些網路架構中以廣播的形式傳遞資料，使得保密性下降
+		- TCP/IP
+			- 在ARPANet網路中起初使用的傳輸協議為NCP，但隨著越來越多的節點加入，也到暴露出NCP的缺點
+				- 各別主機無唯一位址：
+				- 無糾錯機制

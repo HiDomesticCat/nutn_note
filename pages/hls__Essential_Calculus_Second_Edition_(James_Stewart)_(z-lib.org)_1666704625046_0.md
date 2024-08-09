@@ -1,4 +1,4 @@
-public:: true
+public:: false
 file:: [Essential_Calculus_Second_Edition_(James_Stewart)_(z-lib.org)_1666704625046_0.pdf](../assets/Essential_Calculus_Second_Edition_(James_Stewart)_(z-lib.org)_1666704625046_0.pdf)
 file-path:: ../assets/Essential_Calculus_Second_Edition_(James_Stewart)_(z-lib.org)_1666704625046_0.pdf
 
