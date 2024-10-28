@@ -1,4 +1,6 @@
-## 前言
+public:: true
+
+- ## 前言
 	- ### 資料來源
 - # 目錄
 	- ((26b61e51-7681-4f4d-84ba-b7052fca2833))
@@ -236,7 +238,7 @@
 	- 工業控制系統 (ICS)
 		- 營運技術 (OT)
 		- 普渡模型
-			- ![gKq3fqu.png](../assets/gKq3fqu_1722240100142_0.png)
+			- ![gKq3fqu.png](../assets/gKq3fqu_1722240100142_0.png){:height 592, :width 555}
 				- https://hackmd.io/@tuBp9oxkSra7nw4TNItvUg/Syln1qLbo
 		- PLC 邏輯控制
 			- ![The-PLC-ladder-diagram.png](../assets/The-PLC-ladder-diagram_1722241351392_0.png)
