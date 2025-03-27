@@ -238,7 +238,7 @@ public:: true
 	- 工業控制系統 (ICS)
 		- 營運技術 (OT)
 		- 普渡模型
-			- ![gKq3fqu.png](../assets/gKq3fqu_1722240100142_0.png)
+			- ![gKq3fqu.png](../assets/gKq3fqu_1722240100142_0.png){:height 592, :width 555}
 				- https://hackmd.io/@tuBp9oxkSra7nw4TNItvUg/Syln1qLbo
 		- PLC 邏輯控制
 			- ![The-PLC-ladder-diagram.png](../assets/The-PLC-ladder-diagram_1722241351392_0.png)
