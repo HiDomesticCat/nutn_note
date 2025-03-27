@@ -9,6 +9,7 @@ public:: true
 - # 目錄
 	- ((657c2ecb-5110-45d4-a15a-bd3dc69eb208))
 	- ((662d5134-c717-4a73-9a8d-4b5ef2129ddb))
+	- ((67b5afe9-f040-4197-9bae-1add571962a0))
 - # Network Model
   id:: 657c2ecb-5110-45d4-a15a-bd3dc69eb208
   collapsed:: true
@@ -119,3 +120,19 @@ public:: true
 			- 在ARPANet網路中起初使用的傳輸協議為NCP，但隨著越來越多的節點加入，也到暴露出NCP的缺點
 				- 各別主機無唯一位址：
 				- 無糾錯機制
+- # Windows server 2022
+  id:: 67b5afe9-f040-4197-9bae-1add571962a0
+  collapsed:: true
+	- ## 帳戶與群組管理
+		- ### 使用本機使用者和群組管理控制台 (lusrmgr.msc)
+			- 以系統管理權限執行 `lusrmgr.msc`（可按下 `Win + R` 輸入該命令）
+			- 建立新使用者帳戶
+				- 在右側空白處按右鍵，選擇「**新使用者**」。在彈出的對話框中填寫新帳戶的使用者名稱和密碼等必要資訊（可以設定密碼，並選擇是否需要使用者下次登入時更改密碼或密碼永不過期等）​。完成後點擊「建立 (Create)」來新增該本機帳戶。
+				- ![image.png](../assets/image_1739975956835_0.png)
+			- 將使用者加入本機群組
+				- 新帳戶建立後，若需要給予特定權限，可將其加入適當的本機群組。在**本機使用者和群組**管理介面中找到剛建立的使用者，右鍵選擇「**內容**」，切換到「**隸屬群組 (Member Of)**」頁籤，點擊「**新增**」，輸入欲加入的群組名稱（例如`Administrators`系統管理員群組），按「確定」將該使用者加入該群組​。另一種方法是直接在左側選擇「**群組 (Groups)**」，雙擊目標群組，於「成員」頁籤中點選「新增」，搜尋並加入使用者​
+				- ![image.png](../assets/image_1739978651890_0.png){:height 462, :width 547}
+		- ## 使用 Active Directory 使用者和電腦 (ADUC) 管理網域帳戶與群組
+			- ### AD 簡介
+				- **Active Directory** 是Windows Server中，負責集中式目錄管理服務，其中主要概念為物件，物件可以是使用者、群組、電腦、網域控制站、郵件、設定檔、組織單元、樹系等等，只要是在Active Directory結構定義檔（schema）中定義的物件，就可以儲存在Active Directory資料檔中，並利用Active Directory Service Interface來存取。
+				-
